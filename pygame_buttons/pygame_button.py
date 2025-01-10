@@ -14,11 +14,8 @@ class PygameButton:
         self.font = font
         try :
             self.font = pg.font.Font(self.font, 20)
-        except FileNotFoundError:
-            try :
-                self.font = pg.font.SysFont(self.font, 20)
-            except TypeError:
-                self.font = pg.font.Font('freesansbold.ttf', 20)
+        except TypeError:
+            self.font = pg.font.Font('freesansbold.ttf', 20)
         self.active = active
         self.clicked = False
         self.clicked_prev_frame = False
