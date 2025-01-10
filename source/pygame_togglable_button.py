@@ -1,5 +1,5 @@
 import pygame as pg
-from pygame_button import PygameButton
+from .pygame_button import PygameButton
 
 def pgcolor(r, g, b):
     if 0 < r < 1 or 0 < g < 1 or 0 < b < 1:
