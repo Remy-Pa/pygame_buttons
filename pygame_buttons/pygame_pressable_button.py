@@ -25,14 +25,13 @@ class PygamePressableButton(PygameButton):
             self.size = list(self.size)
             self.size[1] = self.text_height + 20
             print('Text was too tall, button was made taller to fit the text')
-        self.center = (coords[0]+size[0]/2, coords[1]+size[1]/2)
+        self.center = (coords[0]+self.size[0]/2, coords[1]+self.size[1]/2)
+        self.button_botright = (int(self.center[0]+self.size[0]/2), int(self.center[1]+self.size[1]/2))
         self.button_rect = pg.rect.Rect(*self.coords, *self.size)
 
     def display(self):
 
-        button_topleft = (self.center[0]-self.size[0]/2, self.center[1]-self.size[1]/2)
-        button_botright = (int(self.center[0]+self.size[0]/2), int(self.center[1]+self.size[1]/2))
-        if min(button_topleft) < 0 or button_botright[0] > self.parent.get_size()[0] or button_botright[1] > self.parent.get_size()[1]:
+        if min(self.coords) < 0 or self.button_botright[0] > self.parent.get_size()[0] or self.button_botright[1] > self.parent.get_size()[1]:
             print('Invalid coordinates for button')
             return 'Invalid coordinates'
 
@@ -46,4 +45,3 @@ class PygamePressableButton(PygameButton):
         text_topleft = (self.center[0]-self.text_width/2, self.center[1]-self.text_height/2)
         displayable_text = self.font.render(self.text, True, (0,0,0))
         self.parent.blit(displayable_text, text_topleft)
-        print(f'center : {self.center}\ntext_width : {self.text_width}\nbutton topleft : {button_topleft}\ntext topleft : {text_topleft}')
