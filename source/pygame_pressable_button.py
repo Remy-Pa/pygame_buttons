@@ -1,3 +1,11 @@
+import pygame as pg
+from pygame_button import PygameButton
+
+def pgcolor(r, g, b):
+    if 0 < r < 1 or 0 < g < 1 or 0 < b < 1:
+        return (r*255, g*255, b*255)
+
+
 class PygamePressableButton(PygameButton):
 
     def __init__(self, parent, coords, text, function, color = (0.3,0.3,0.3), border_color = (0.05,0.05,0.05), clicked_color = (0.1,0.1,0.1), size = (150,40), active = True):
