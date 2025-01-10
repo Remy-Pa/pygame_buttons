@@ -10,7 +10,7 @@ setup(
     long_description_content_type='text/markdown',
     url='https://github.com/Remy-Pa/pygame_buttons/',
     packages=find_packages(),
-    package_dir={'': 'pygame_buttons'},
+    # package_dir={'': 'pygame_buttons'},
     classifiers=[
         'Programming Language :: Python :: 3',
         'License :: OSI Approved :: MIT License',
