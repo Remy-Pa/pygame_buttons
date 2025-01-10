@@ -9,8 +9,8 @@ setup(
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
     url='https://github.com/Remy-Pa/pygame_buttons/',
-    packages=find_packages(where = 'source'),
-    package_dir={'': 'source'},
+    packages=find_packages(where = 'pygame_buttons'),
+    package_dir={'': 'pygame_buttons'},
     classifiers=[
         'Programming Language :: Python :: 3',
         'License :: OSI Approved :: MIT License',
