@@ -50,7 +50,7 @@ while True:
 
 ![image](https://github.com/user-attachments/assets/f72d68fc-e571-45cf-afaa-6ef71844c25e)
 
-As the function is defined that was, every time either button is pressed, it prints a new line in the terminal.
+The terminal shows the output of the random_function() used as an example.
 
 ## Detailed description
 
